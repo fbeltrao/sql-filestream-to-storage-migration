@@ -55,7 +55,7 @@ namespace FileStreamToAzureStorageMigrator
             _filesStreamInfoCsvFile = filesStreamInfoCsvFile;
         }
 
-        public async Task ExtractDataFromDbAsync()
+        public async Task CopyDataAsync()
         {
             var fileStreamFiles = new List<FileStreamFile>();
 

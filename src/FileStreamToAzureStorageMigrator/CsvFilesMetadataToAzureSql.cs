@@ -23,7 +23,7 @@ namespace FileStreamToAzureStorageMigrator
             _sqlConnection.Open();
         }
 
-        public async Task UpdateAsync()
+        public async Task CopyDataAsync()
         {
             var files = this.ReadFromFile();
 

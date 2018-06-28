@@ -23,11 +23,13 @@ namespace FileStreamToAzureStorageMigrator
             string destinationAzureBlobStorageConnectionString = Configuration["destination:azureBlobStorageConnectionString"];
             string filesStreamInfoCsvFile = Configuration["source:filesStreamInfoCsvFile"];
 
+            // Step 1: copy the file contents to Blob Storage
             var sqlServerToAzureBlobStorage = new SqlServerToAzureBlobStorage(sourceSqlServerDatabaseConnectionString, destinationAzureBlobStorageConnectionString, filesStreamInfoCsvFile);
-            await sqlServerToAzureBlobStorage.ExtractDataFromDbAsync();
+            await sqlServerToAzureBlobStorage.CopyDataAsync();
 
-            var updateTask = new CsvFilesMetadataToAzureSql(destinationAzureSqlDatabaseConnectionString, filesStreamInfoCsvFile);
-            await updateTask.UpdateAsync();
+            // Step 2: copy the files metadata (table) to Azure SQL
+            var filesMetadataToAzureSql = new CsvFilesMetadataToAzureSql(destinationAzureSqlDatabaseConnectionString, filesStreamInfoCsvFile);
+            await filesMetadataToAzureSql.CopyDataAsync();
         }
 
 
