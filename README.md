@@ -74,4 +74,4 @@ class Program
   - The [SqlServerToAzureBlobStorage.cs](/src/FileStreamToAzureStorageMigrator/SqlServerToAzureBlobStorage.cs) SQL queries in this class with the queries you need to fetch from you SQL Server database
   
 ### Contributors
-[@damirkusar](https://github.com/damirkusar), [@DjolePetrovic](https://github.com/DjolePetrovic), [@fbeltrao](https://github.com/fbeltrao) and [@CarlosSardo](https://github.com/carlossardo)
+[@damirkusar](https://github.com/damirkusar), [@DjolePetrovic](https://github.com/DjolePetrovic), [@meinradweiss](https://github.com/meinradweiss), [@fbeltrao](https://github.com/fbeltrao) and [@CarlosSardo](https://github.com/carlossardo)
