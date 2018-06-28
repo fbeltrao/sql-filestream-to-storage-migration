@@ -30,4 +30,4 @@ A simple .NET Core 2.1 tool to help you migrate your [SQL Server FileStream](htt
   - The [SqlServerToAzureBlobStorage.cs](/src/FileStreamToAzureStorageMigrator/SqlServerToAzureBlobStorage.cs) SQL queries in this class with the queries you need to fetch from you SQL Server database
 
 ### Contributors
-[@DjolePetrovic](https://github.com/DjolePetrovic), [@fbeltrao](https://github.com/fbeltrao) and [@CarlosSardo](https://github.com/carlossardo)
+[@damirkusar](https://github.com/damirkusar), [@DjolePetrovic](https://github.com/DjolePetrovic), [@fbeltrao](https://github.com/fbeltrao) and [@CarlosSardo](https://github.com/carlossardo)
